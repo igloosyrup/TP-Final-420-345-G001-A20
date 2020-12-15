@@ -1,0 +1,40 @@
+<h2>L'id recupéré est: {{tutorielLinkId}}</h2>
+
+
+<span [ngSwitch]="tutorielLinkId">
+    <ng-container *ngSwitchCase="1">
+        <div>
+            <h1 class="text-capitalize">mini tutoriel angular 10</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, maxime animi laudantium aut
+                saepe, cumque at repellendus esse tempore quaerat ducimus enim. Ad magnam dignissimos labore, delectus
+                voluptates non qui quod, ut ex repellendus necessitatibus pariatur at aut, consequuntur ab atque ipsa
+                doloremque. Eveniet nostrum repellendus, et neque ad aut!</p>
+        </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="2">
+        <div>
+            <h1 class="text-capitalize">mini tutoriel crud</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae enim numquam cupiditate. Necessitatibus
+                inventore placeat consectetur corrupti pariatur. Eveniet, ipsa?</p>
+        </div>
+    </ng-container>
+
+    <ng-container *ngSwitchCase="3">
+        <div>
+            <h1 class="text-capitalize">mini tutoriel relations</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos maxime odio quo illum molestiae, beatae
+                tempore! Ullam enim dolorem, qui impedit illum, rem nam neque accusantium eum obcaecati cumque ducimus
+                laborum error commodi non voluptatem, nihil minima maxime assumenda repudiandae alias laboriosam itaque
+                architecto! Dicta architecto rerum ratione consequatur possimus.</p>
+        </div>
+    </ng-container>
+    
+    <ng-container *ngSwitchDefault>
+        <div>
+            <h1 class="text-capitalize">Tutoriel a venir</h1>
+            
+        </div>
+
+    </ng-container>
+</span>

@@ -1,0 +1,33 @@
+<div class="container">
+
+  <h1 class="text-capitalize text-center">exemple crud</h1>
+  <table class="table">
+    <thead class="bg-dark text-light">
+      <tr class="text-center">
+        <th></th>
+        <th scope="col" *ngFor="let item of tableHeadElement"> {{item}} </th>
+        <th scope="col"><i class="fab fa-youtube text-danger align-middle mr-1"></i>
+          <span class="align-middle">Youtube</span>
+        </th>
+        <th scope="col">Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let member of listeHoloMembers, let i = index" class="text-center">
+        <td class="text-left"><span class="mr-2">{{member.id}}</span>
+          <img [src]="[member.profile]" alt="../assets/member-images/rushia.png" class="rounded mx-auto d-block" style="width: 20em; height: 20em;">
+        </td>
+        <td>{{member.lastName}}</td>
+        <td>{{member.firstName}}</td>
+        <td>{{member.age}}</td>
+        <td><a href="{{member.youtube}}" class="text-capitalize font-weight-bold">Visit Channel</a></td>
+        <td>
+          <a href="" class="btn btn-info">Display</a>
+          <a [routerLink]="['/updateForm/', member.id]" class="btn btn-primary">Update</a>
+          <button type="button" (click)="deleteMember(member.id)" class="btn btn-danger">Delete </button>
+          <button type="button" (click)="deleteMember2(member.id, i)" class="btn btn-danger">Delete2</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

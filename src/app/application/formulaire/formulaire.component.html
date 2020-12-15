@@ -1,0 +1,60 @@
+<div class="container-fluid col-md-9 mb-5">
+  <h1 class="text-center text-capitalize">application form</h1>
+  <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
+    <div *ngIf="invalidFormMessage != ''" class="text-center">
+      <h3 class="text-danger font-weight-bold">{{invalidFormMessage}}</h3>
+    </div>
+    <div class="form-group mb-3">
+      <label for="firstName" class="form-label text-capitalize">first name</label>
+      <input type="name" class="form-control" id="firstName" formControlName="firstName">
+      <div *ngIf="form.firstName.invalid && (form.firstName.dirty || form.firstName.touched)"
+        class="text-danger font-weight-bold ml-2">
+        <div *ngIf="form.firstName.errors.required">The first name is required</div>
+        <div *ngIf="form.firstName.errors.minlength">First Name must be at least 4 characters</div>
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="lastName" class="form-label text-capitalize">last name</label>
+      <input type="name" class="form-control" id="lastName" formControlName="lastName">
+      <div *ngIf="form.lastName.invalid && (form.lastName.dirty || form.lastName.touched)"
+        class="text-danger font-weight-bold">
+        <div *ngIf="form.lastName.errors.required">The last name is required</div>
+        <div *ngIf="form.lastName.errors.minlength"> Last Name must be at least 4 characters</div>
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="age" class="form-label text-capitalize">age</label>
+      <input type="number" class="form-control" id="age" formControlName="age">
+      <div *ngIf="form.age.invalid && (form.age.dirty || form.age.touched)" class="text-danger font-weight-bold ml-2">
+        <div *ngIf="form.age.errors.required">Age is required</div>
+        <div *ngIf="form.age.errors.max">Age cannot exceed 3 digits</div>
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="youtube" class="form-label text-capitalize">youtube channel</label>
+      <input type="url" class="form-control" id="youtube" formControlName="youtube">
+      <div *ngIf="form.youtube.invalid && (form.youtube.dirty || form.youtube.touched)"
+        class="text-danger font-weight-bold">
+        <div>The youtube channel url is required</div>
+      </div>
+    </div>
+
+    <div class="form-group mb-3">
+      <label for="profile" class="form-label text-capitalize">profile picture url</label>
+      <input type="url" class="form-control" id="profile" formControlName="profile">
+      <div *ngIf="form.profile.invalid && (form.profile.dirty || form.profile.touched)"
+        class="text-danger font-weight-bold">
+        <div>The profile picture url is required</div>
+      </div>
+    </div>
+
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="">
+      <label class="form-check-label" for="">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
