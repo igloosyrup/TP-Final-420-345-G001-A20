@@ -46,4 +46,4 @@ testem.log
 Thumbs.db
 
 # Non-essential Files
-/theorie/formulaires
+theorie/
