@@ -1,9 +1,9 @@
 <div class="container col-sm-12 col-md-10" style="margin-top:10em">
-  <h1 class="text-center mb-5 holoFont holoText display-4">List of Hololive Members</h1>
+  <h1 class="text-center mb-5 holoFont holoText display-3">{{tableName}}</h1>
   <div class="table-responsive">
     <table class="table holoFont mt-3" style="border: 0.25em solid #5cbbfa;">
 
-      <thead class="text-light holoBar" style="font-size: 1.5em;">
+      <thead class="text-light" style="font-size: 1.5em; background-color: #5cbbfa;">
         <tr class="text-center">
           <th></th>
           <th scope="col" *ngFor="let item of tableHeadElement"> {{item}} </th>
@@ -26,7 +26,7 @@
           <td class="align-middle" style="font-size: 1.5em;">{{member.firstName}}</td>
           <td class="align-middle" style="font-size: 1.5em;">{{member.age}}</td>
           <td class="align-middle" style="font-size: 1.5em;"><a href="{{member.youtube}}"
-              class="text-capitalize font-weight-bold">visit me<i class="far fa-kiss-wink-heart ml-2 text-danger"></i></a></td>
+              class="text-capitalize font-weight-bold">visit me<i class="far fa-kiss-wink-heart ml-2 text-danger" style="font-size: 1.;"></i></a></td>
           <td class="align-middle">
             <div class="mb-2">
               <a [routerLink]="['/read/', member.id]" class="btn button" style="width: 12em;"><i

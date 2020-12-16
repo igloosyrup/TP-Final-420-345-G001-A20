@@ -9,7 +9,7 @@ import { HoloMemberService } from '../../../services/holo-member.service';
 })
 
 export class ReadComponent implements OnInit {
-
+  tableName: string = 'List of Members';
   tableHeadElement = ['Last-Name', 'First-Name', 'Age'];
   listeHoloMembers: Array<HoloMember>;
 
