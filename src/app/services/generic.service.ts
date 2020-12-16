@@ -1,6 +1,10 @@
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-
+/**
+ * @Author Zi Yu Chen
+ * matricule: 16822559
+ * Github user: IglooSyrup
+ */
 export class GenericService<T, ID> {
 
   constructor(protected http: HttpClient, protected url: string) { }

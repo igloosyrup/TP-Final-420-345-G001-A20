@@ -1,19 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { HoloMember } from 'src/app/modele/holoMember';
 import { HoloMemberService } from '../../../services/holo-member.service';
+
 @Component({
   selector: 'app-read',
   templateUrl: './read.component.html',
   styleUrls: ['./read.component.css']
 })
+
 export class ReadComponent implements OnInit {
 
   tableHeadElement = ['Last-Name', 'First-Name', 'Age'];
   listeHoloMembers: Array<HoloMember>;
 
-  constructor(private service: HoloMemberService) {
-
-  }
+  constructor(private service: HoloMemberService) { }
 
   ngOnInit(): void {
     this.getAllHoloMembers();
@@ -27,17 +27,6 @@ export class ReadComponent implements OnInit {
     });
   }
 
-  public deleteMember(holoMemberId: number) {
-    if (window.confirm('Are you sure?')) {
-      this.service.deleteById(holoMemberId).subscribe(result => {
-        this.listeHoloMembers =
-          this.listeHoloMembers.filter(record => record.id != holoMemberId);
-      }, (error) => {
-        console.log(error);
-      });
-    }
-  }
-
   public deleteMember2(holoMemberId: number, i: any) {
     if (window.confirm('Are you sure?')) {
       this.service.deleteById(holoMemberId).subscribe(result => {
@@ -46,6 +35,6 @@ export class ReadComponent implements OnInit {
         console.log(error);
       });
     }
-
   }
+
 }

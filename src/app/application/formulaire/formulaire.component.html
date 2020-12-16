@@ -1,4 +1,4 @@
-<div class="container-fluid col-md-9 mb-5">
+<div class="container-fluid col-md-9 mb-5" style="margin-top: 6em;">
   <h1 class="text-center text-capitalize">application form</h1>
   <form [formGroup]="applicationForm" (ngSubmit)="onSubmit()">
     <div *ngIf="invalidFormMessage != ''" class="text-center">
@@ -51,10 +51,6 @@
       </div>
     </div>
 
-    <div class="mb-3 form-check">
-      <input type="checkbox" class="form-check-input" id="">
-      <label class="form-check-label" for="">Check me out</label>
-    </div>
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>

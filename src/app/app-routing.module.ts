@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ContactComponent } from './application/contact/contact.component';
+import { ReadMemberComponent } from './application/crud/read-member/read-member.component';
 import { ReadComponent } from './application/crud/read/read.component';
 import { UpdateComponent } from './application/crud/update/update.component';
 import { ErreurComponent } from './application/erreur/erreur.component';
@@ -16,6 +17,8 @@ const routes: Routes = [
       { path: ':id', component: TutorielsComponent },
     ]
   },
+
+  { path: 'read/:id', component: ReadMemberComponent },
   { path: 'updateForm/:id', component: UpdateComponent },
   { path: 'formulaire', component: FormulaireComponent },
   { path: 'crud', component: ReadComponent },

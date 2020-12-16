@@ -15,6 +15,7 @@ import { ContactComponent } from './application/contact/contact.component';
 import { HomeComponent } from './application/home/home.component';
 import { ErreurComponent } from './application/erreur/erreur.component';
 import { TutorielsComponent } from './application/tutoriels/tutoriels.component';
+import { ReadMemberComponent } from './application/crud/read-member/read-member.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TutorielsComponent } from './application/tutoriels/tutoriels.component'
     ContactComponent,
     HomeComponent,
     ErreurComponent,
-    TutorielsComponent
+    TutorielsComponent,
+    ReadMemberComponent
   ],
   imports: [
     BrowserModule,
