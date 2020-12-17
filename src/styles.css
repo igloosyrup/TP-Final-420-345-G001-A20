@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face{
+    font-family: Chicago;
+    src: url(./assets/fonts/Chicago-Regular.ttf);
+}
+
+.holoBar{
+    background-color: rgba(39,162,232, 0.75);
+}
+
+.holoBackground{
+    background-color: rgb(39,162,232);
+}
+
+.holoFont{
+    font-family: Chicago;
+}
+
+.holoDropDown{
+    background-color: #5cbbfa;
+}
+
+.holoText{
+    color: #08c5ff;
+}
