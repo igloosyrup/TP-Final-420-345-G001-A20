@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HoloMember } from 'src/app/modele/holoMember';
 import { HoloMemberService } from '../../services/holo-member.service';
 
 @Component({
@@ -28,7 +27,6 @@ export class FormulaireComponent implements OnInit {
 
   onSubmit() {
     if (this.applicationForm.valid) {
-      // this.service.post(new HoloMember());
       this.service.post(this.applicationForm.value).subscribe(data => {
         this.invalidFormMessage ='';
         this.applicationForm.reset();
@@ -43,6 +41,5 @@ export class FormulaireComponent implements OnInit {
   get form() {
     return this.applicationForm.controls;
   }
-
 
 }
