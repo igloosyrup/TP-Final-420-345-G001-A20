@@ -5,13 +5,15 @@ import { HoloMemberService } from '../../../services/holo-member.service';
 @Component({
   selector: 'app-read',
   templateUrl: './read.component.html',
-  styleUrls: ['./read.component.css']
+  styleUrls: ['./read.component.css'],
+
 })
 
 export class ReadComponent implements OnInit {
   tableName: string = 'List of Members';
   tableHeadElement = ['Last-Name', 'First-Name', 'Age'];
   listeHoloMembers: Array<HoloMember>;
+  isDelete: boolean = false;
 
   constructor(private service: HoloMemberService) { }
 
@@ -27,8 +29,9 @@ export class ReadComponent implements OnInit {
     });
   }
 
-  public deleteMember2(holoMemberId: number, i: any) {
-    if (window.confirm('Are you sure?')) {
+  public deleteMember(holoMemberId: number, i: any) {
+    // if (window.confirm('Are you sure?')) {
+    if (window.confirm('are you sure you want to delete?')) {
       this.service.deleteById(holoMemberId).subscribe(result => {
         this.listeHoloMembers.splice(i, 1);
       }, (error) => {
@@ -36,5 +39,4 @@ export class ReadComponent implements OnInit {
       });
     }
   }
-
 }

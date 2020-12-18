@@ -1,16 +1,16 @@
 <section style="margin-bottom: 10em">
-<!-- Start background -->
-<div class="bg" style="margin-bottom: 1em;">
-  <div style="background: rgba(1,1,1, 0.2); height: 60vh;">
+  <!-- Start background -->
+  <div class="bg" style="margin-bottom: 1em;">
+    <div style="background: rgba(1,1,1, 0.2); height: 60vh;">
+    </div>
   </div>
-</div>
-<!-- End background -->
+  <!-- End background -->
 
-<!-- Start Read -->
-  <div class="container col-sm-12 col-md-10" style="margin-top: 2.5em">
-    <h1 class="text-center mb-5 holoFont holoText display-3">{{tableName}}</h1>
+  <!-- Start Read -->
+  <h1 class="text-center my-5 holoFont holoText display-3">{{tableName}}</h1>
+  <div class="container col-sm-12" style="margin-top: 2.5em; padding-top:5em; padding-bottom: 5em; background-color: lightcyan;">
     <div class="table-responsive">
-      <table class="table holoFont mt-3" style="border: 0.25em solid #5cbbfa;">
+      <table class="table holoFont mt-3 bg-light" style="border: 0.25em solid #5cbbfa;">
         <thead class="text-light" style="font-size: 1.5em; background-color: #5cbbfa;">
           <tr class="text-center">
             <th></th>
@@ -33,8 +33,8 @@
             <td class="align-middle" style="font-size: 1.5em;">{{member.firstName}}</td>
             <td class="align-middle" style="font-size: 1.5em;">{{member.age}}</td>
             <td class="align-middle" style="font-size: 1.5em;"><a href="{{member.youtube}}"
-                class="text-capitalize font-weight-bold" target="_blank">visit me<i class="far fa-kiss-wink-heart ml-2 text-danger"
-                  style="font-size: 1.;"></i></a></td>
+                class="text-capitalize font-weight-bold" target="_blank">visit me<i
+                  class="far fa-kiss-wink-heart ml-2 text-danger" style="font-size: 1.;"></i></a></td>
             <td class="align-middle">
               <div class="mb-2">
                 <a [routerLink]="['/read/', member.id]" class="btn button" style="width: 12em;"><i
@@ -45,7 +45,7 @@
                     class="fas fa-edit float-left mt-1 mr-2"></i>Update Member</a>
               </div>
               <div class="mb-2">
-                <button type="button" (click)="deleteMember2(member.id, i)" class="btn button" style="width: 12em;"><i
+                <button type="button" (click)="deleteMember(member.id, i)" class="btn button" style="width: 12em;"><i
                     class="fas fa-trash-alt float-left mt-1 mr-2"></i>Delete Member</button>
               </div>
             </td>
@@ -55,5 +55,5 @@
     </div>
   </div>
   <!-- End Read -->
-  
+
 </section>

@@ -4,6 +4,12 @@
     src: url(./assets/fonts/Chicago-Regular.ttf);
 }
 
+.ng-invalid:not(form).ng-touched{
+
+    border: 2px solid red;
+
+}
+
 .holoBar{
     background-color: rgba(39,162,232, 0.75);
 }

@@ -1,5 +1,11 @@
-.ng-invalid:not(form).ng-touched{
+.bg{
+    background-image: url('../../../assets/image/holoMembers.png');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center center;
+    height: 60vh;
+}
 
-    border: 1px solid red;
-
+#memberForm{
+    background-color: lightcyan;
 }
