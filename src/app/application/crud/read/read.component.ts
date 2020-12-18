@@ -13,7 +13,6 @@ export class ReadComponent implements OnInit {
   tableName: string = 'List of Members';
   tableHeadElement = ['Last-Name', 'First-Name', 'Age'];
   listeHoloMembers: Array<HoloMember>;
-  isDelete: boolean = false;
 
   constructor(private service: HoloMemberService) { }
 

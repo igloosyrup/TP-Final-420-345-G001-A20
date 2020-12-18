@@ -32,7 +32,7 @@ export class UpdateComponent implements OnInit {
     this.updateForm = new FormGroup({
       firstName: new FormControl('', [Validators.required, Validators.minLength(4)]),
       lastName: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      age: new FormControl('', [Validators.required, Validators.max(999)]),
+      age: new FormControl('', [Validators.required, Validators.min(18), Validators.max(999)]),
       youtube: new FormControl('', Validators.required),
       profile: new FormControl('', Validators.required),
     });

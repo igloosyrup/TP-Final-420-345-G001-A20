@@ -53,6 +53,7 @@
                         <div *ngIf="form.age.invalid && (form.age.dirty || form.age.touched)"
                             class="text-danger font-weight-bold ml-2">
                             <div *ngIf="form.age.errors.required">Age is required</div>
+                            <div *ngIf="form.age.errors.min">Must be at least 18 years old</div>
                             <div *ngIf="form.age.errors.max">Age cannot exceed 3 digits</div>
                         </div>
                     </div>

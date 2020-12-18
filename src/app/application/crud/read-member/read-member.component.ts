@@ -11,7 +11,6 @@ import { HoloMemberService } from 'src/app/services/holo-member.service';
 })
 export class ReadMemberComponent implements OnInit {
 
-  invalidFormMessage: string = "";
   id: number;
   holoMember: HoloMember;
   readMemberForm: FormGroup;
