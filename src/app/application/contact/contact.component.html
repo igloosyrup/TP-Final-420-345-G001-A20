@@ -47,7 +47,7 @@
     <div class="container pt-5 mb-3" style="background-color: rgba(255,255,255,0.3); border-radius: 15px;">
         <h1 class="text-center mb-5 display-4 text-white holoFont">Questions or comments?</h1>
         <form [formGroup]="feedbackForm" (ngSubmit)="onSubmit()" class="mx-5 py-5">
-            <div *ngIf="invalidFormMessage != ''" class="text-center">
+            <div *ngIf="invalidFormMessage != ''" class="text-center mb-5">
                 <h3 class="text-danger font-weight-bold">{{invalidFormMessage}}</h3>
             </div>
             <div class="form-group" style="margin-bottom: 5em;">

@@ -30,6 +30,7 @@ export class FormulaireComponent implements OnInit {
       this.service.post(this.applicationForm.value).subscribe(data => {
         this.invalidFormMessage ='';
         this.applicationForm.reset();
+        window.alert("You have joined the team!!!");
         this.router.navigateByUrl('/home');
       });
     }
