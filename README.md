@@ -27,7 +27,54 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 
-## Install jquery for the confirmation button
-npm install --save-dev @types/jquery
-npm install --save jquery
-nvm this sht aint worth my time
+
+==========Étape pour créer un projet Angular============
+1. Créer un répertoire Workspace dans l'emplacement désiré
+
+1. Entrer dans le répertoire et ouvrir un git bash afin d'exécuter la commande suivante pour créer un projet : ng n nomDuProjet --routing
+
+2. Toujours dans le git bash, lancer Visual Studio code en exécutant : code .
+
+3. Installer les librairies:
+  npm i jquery
+  npm i bootstrap
+  npm i json-server 
+  npm i @fortawesome/fontawesome-free --save
+
+4. Configurer les options dans le fichier Angular.json du projet pour ajouter jQuery et bootstrap 
+  "styles": [
+   "node_modules/bootstrap/dist/css/bootstrap.min.css",
+   "node_modules/@fortawesome/fontawesome-free/css/all.css",
+   "src/styles.css"
+  ],
+  "scripts": [
+    "node_modules/jquery/dist/jquery.min.js",
+    "node_modules/bootstrap/dist/js/bootstrap.min.js"
+  ]
+
+5. Dans app.module.ts, il faut importer ces 2 modules :
+  import { HttpClientModule } from '@angular/common/http';
+  import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+  Toujours dans app.module.ts, ajouter manuellement les deux modules dans la categorie "imports"
+
+6. Supprimer le HTML du app.component.html et le remplacer par les balises suivantes :
+  |-----------------|
+  | <app-navbar>    |
+  | <router-outlet> |
+  | <app-footer>    |
+
+7. Dans le package.json du projet, modifier dans la section script le start pour que ça devient "start": "ng serve -o --port 5000"
+On rajoute notre propre port désiré.
+
+8. Dans la création du service de l'objet, il faut spécifier le port du http dans le constructeur : 
+super(http, "http://localhost:5050/holoMembers);
+
+
+9. Exécuter la commande suivante pour lancer le serveur Json dans le répertoire database: 
+cd database
+
+json-server -w holoMembers.json --port 5050
+json-server -w feedbacks.json --port 6060
+
+10. Exécuter le projet dans le terminal avec la commande : npm start
